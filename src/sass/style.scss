@@ -1,0 +1,358 @@
+@use 'colors' as *;
+@use 'mixins' as *;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: $light-white;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.nav {
+	position: sticky;
+	top: 0;
+	background-color: $white;
+	border-bottom: 0.1em solid $black;
+	z-index: 1000;
+	&-items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&-logo {
+		background-image: url(../../dist/img/logo.jpg);
+		@include background;
+		height: 3.7em;
+		width: 7.5em;
+		margin: 1.5em;
+	}
+	&-box {
+		position: relative;
+		display: flex;
+		&__item {
+			@include background;
+			margin: 1.2em;
+			height: 2.6em;
+			width: 3em;
+			&-heart {
+				background-image: url(../../src/img/src/heart.svg);
+			}
+			&-bucket {
+				background-image: url(../../src/img/src/basket.svg);
+			}
+			&-account {
+				background-image: url(../../src/img/src/account.svg);
+			}
+		}
+	}
+	&-loggin {
+		@include popup;
+		right: 1em;
+		z-index: 10;
+		&__title {
+			margin: 0.6em 0 1em;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+		&__input {
+			padding: 0.7em 2.2em;
+			margin: 0.5em;
+			border: 0.1em solid $black;
+			background-color: transparent;
+			&::placeholder {
+				color: $grey;
+			}
+		}
+		&-box {
+			display: flex;
+			justify-content: end;
+			padding: 0.7em;
+			&__item {
+				margin-right: 0.5em;
+				width: 1.2em;
+				height: 1.2em;
+			}
+			&__text {
+				font-size: 1.2rem;
+			}
+		}
+		&__error {
+			margin-top: 0.5em;
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			letter-spacing: 0.1em;
+			color: red;
+		}
+		&__btn {
+			position: relative;
+			margin: 0 4em;
+			padding: 1em;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			color: $white;
+			border: transparent;
+			background-color: $black;
+			z-index: 0;
+			&:hover {
+				color: $black;
+			}
+			&::after {
+				@include btnAnimation;
+				background-color: $white;
+				border: 0.1em solid $black;
+			}
+			&:hover::after {
+				transform: translateY(0) scale(1);
+			}
+		}
+		&__text {
+			margin-top: 0.5em;
+			font-size: 1.2rem;
+			color: $black;
+			text-decoration: none;
+		}
+	}
+	&-bucket {
+		@include popup;
+		right: 2em;
+	}
+	&-heart {
+		@include popup;
+		right: 3em;
+		&__box {
+			position: relative;
+			display: flex;
+			margin: 1.3em 0;
+			&-item {
+				width: 15%;
+				margin-left: 1.5em;
+			}
+			&-text {
+				margin-left: 1.5em;
+				text-align: left;
+				color: $black;
+				text-decoration: none;
+				&--title {
+					text-transform: uppercase;
+					font-size: 1.3rem;
+					letter-spacing: 0.1em;
+				}
+				&--item {
+					padding: 0.5em 0;
+					font-size: 1.2rem;
+					color: $grey;
+				}
+				&--price {
+					font-size: 1.5rem;
+					letter-spacing: 0.1em;
+					text-decoration: underline;
+				}
+			}
+			&-img {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				background-image: url(../../src/img/src/x.svg);
+				width: 3em;
+				height: 3em;
+				cursor: pointer;
+			}
+		}
+		&__btn {
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.popup-active {
+	display: none;
+}
+
+.notification {
+	padding: 0.7em;
+	font-size: 1.2rem;
+	text-align: center;
+	border-bottom: 0.1em solid $black;
+	&__text {
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		&-link {
+			position: relative;
+			margin-left: 0.5em;
+			color: $black;
+			z-index: 1;
+			&:hover {
+				color: $white;
+			}
+			&::after {
+				@include btnAnimation;
+				background-color: $black;
+			}
+			&:hover::after {
+				transform: translateY(0) scale(1);
+			}
+		}
+	}
+}
+
+.chose {
+	padding: 3.5em;
+	background-color: $white;
+	border-bottom: 0.1em solid $black;
+	text-align: center;
+	&__title {
+		@include title;
+		padding-bottom: 1em;
+	}
+	&__text {
+		@include text;
+		padding: 0.5em;
+	}
+	&-box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&__item {
+			&-img {
+				position: relative;
+				@include background;
+				background-image: url(../../dist/img/woman-model.jpg);
+				margin: 5em;
+				height: 60em;
+				width: 40em;
+				&:hover {
+					.chose-box__item-img__hero {
+						opacity: 1;
+					}
+				}
+				&__hero {
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					content: '';
+					background-color: rgba(0, 0, 0, 0.3);
+					opacity: 0;
+					cursor: pointer;
+					transition: opacity 0.3s;
+				}
+				&--btn {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: $whitegi;
+					font-size: 3rem;
+					text-transform: uppercase;
+					letter-spacing: 0.1em;
+				}
+			}
+		}
+	}
+}
+
+.news {
+	border-bottom: 0.1em solid $black;
+	text-align: center;
+	&__title {
+		@include title;
+		padding: 2em 0 1em;
+	}
+	&__text {
+		@include text;
+		padding: 0.5em;
+	}
+	&-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&__item {
+			text-align: center;
+		}
+	}
+	&-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 3em;
+		text-decoration: none;
+		color: $black;
+		&__img {
+			width: 50%;
+			object-fit: cover;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.05);
+			}
+		}
+		&__title {
+			margin: 1em 0 0.4em;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+		&__text {
+			font-size: 1.2rem;
+			color: $grey;
+			margin-bottom: 0.5em;
+		}
+		&__price {
+			font-size: 1.5rem;
+			text-decoration: underline;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.nav-box__item {
+		margin: 2em;
+	}
+	.notification {
+		font-size: 1.5rem;
+	}
+	.chose-box {
+		flex-direction: row;
+	}
+	.nav-bucket {
+		right: 8em;
+	}
+	.nav-heart {
+		right: 15em;
+	}
+	.news__text {
+		letter-spacing: 0.15em;
+	}
+	.chose__title {
+		font-size: 3rem;
+	}
+	.news__title {
+		font-size: 3rem;
+	}
+}
+@media (min-width: 768px) {
+}
+@media (min-width: 992px) {
+}
