@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+    <div class="wrapper nav-items">
+        <a href="index.html">
+            <div class="nav-logo"></div>
+        </a>
+        <div class="nav-box">
+            <div class="nav-box__item nav-box__item-heart popup"></div>
+            <div class="nav-heart active popup-box">
+                <h3 class="nav-loggin__title">polubione</h3>
+                <div class="nav-heart__box">
+                    <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
+                    <a href="#" class="nav-heart__box-text">
+                        <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
+                        <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                        <p class="nav-heart__box-text--price">199,99 PLN</p>
+                    </a>
+                    <div class="nav-heart__box-img"></div>
+                </div>
+                <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do polubionych</a>
+            </div>
+            <div class="nav-box__item nav-box__item-bucket popup"></div>
+            <div class="nav-bucket active popup-box">
+                <h3 class="nav-loggin__title">twój koszyk</h3>
+                <div class="nav-heart__box">
+                    <img src="dist/img/items2.jpg" alt="koszulka" class="nav-heart__box-item">
+                    <a href="#" class="nav-heart__box-text">
+                        <h3 class="nav-heart__box-text--title">biała koszulka</h3>
+                        <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                        <p class="nav-heart__box-text--price">249,99 PLN</p>
+                    </a>
+                    <div class="nav-heart__box-img"></div>
+                </div>
+                <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do koszyka</a>
+            </div>
+            <div class="nav-box__item nav-box__item-account popup"></div>
+            <div class="nav-loggin active popup-box">
+                <h3 class="nav-loggin__title">zaloguj się</h3>
+                <input type="text" placeholder="Wpisz swój email" class="nav-loggin__input">
+                <input type="password" placeholder="Wpisz swóje hasło" class="nav-loggin__input">
+                <div class="nav-loggin-box">
+                    <input type="checkbox" class="nav-loggin-box__item">
+                    <p class="nav-loggin-box__text">Zapamiętaj mnie</p>
+                </div>
+                <button class="nav-loggin__btn nav-loggin__btn--first">zaloguj się</button>
+                <!-- <p class="nav-loggin__error">Błędny email lub hasło</p> -->
+                <a class="nav-loggin__text" href="#">Przypomnij hasło</a>
+                <h3 class="nav-loggin__title">stwórz konto</h3>
+                <button class="nav-loggin__btn">zarejestruj się</button>
+            </div>
+        </div>
+    </div>
+</nav>
+    <section class="form">
+        <h2 class="form__title">Formularz zwrotów</h2>
+        <p class="form__text">Nie spodobały ci się nasze usługi lub nie trafiłeś z rozmiarem, prezentem? Odeślij paczke
+            spowrotem jeśli spełnia warunki naszego regulaminu zwrotów</p>
+        <ul class="form-steps">
+            <li class="form-steps__item">
+                <span class="form-steps__item-count first-form">1</span>
+                <span class="form-steps__item-label">Twoje dane</span>
+            </li>
+            <li class="form-steps__item">
+                <span class="form-steps__item-count secound-form">2</span>
+                <span class="form-steps__item-label">Formularz zwrotu</span>
+            </li>
+            <li class="form-steps__item">
+                <span class="form-steps__item-count third-form">3</span>
+                <span class="form-steps__item-label">Wysyłanie</span>
+            </li>
+        </ul>
+
+
+
+
+
+        <div class="wrapper form-box">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Imię nazwisko</label>
+                <input type="text" class="form-item__input nameInput" placeholder="Andrzej Kowalski">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Adres email</label>
+                <input type="email" class="form-item__input emailInput" placeholder="mail@mail.com">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Wybierz formularz</label>
+                <select name="reclamation" class="form-item__input selectChose">
+                    <option value="0" disabled selected>Wybierz z listy</option>
+                    <option value="1">Formularz zwrotów</option>
+                    <option value="2">Formularz reklamacji</option>
+                    <option value="3">Formularz linku śledzącego</option>
+                    <option value="4">Formularz kontaktowy</option>
+                </select>
+            </div>
+        </div>
+
+        <p class="nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
+
+        <div class="wrapper secound-formBox returnForm-box active"></div>
+        <div class="wrapper secound-formBox reclamationForm-box active"></div>
+        <div class="wrapper secound-formBox trackForm-box active"></div>
+        <div class="wrapper secound-formBox contactForm-box active"></div>
+
+        <div class="wrapper send-box active"></div>
+        <div class="wrapper sent-form active">
+            <h2 class="sent-form__title">Pomyślnie wysłano</h2>
+            <p class="sent-form__text">Twój formularz został pomyślnie wysłany, postaramy się odpowiedzieć jak najszybciej</p>
+        </div>
+        
+        
+
+
+        <button class="form__btn">Przejdź dalej</button>
+        <script src="dist/js/main.min.js"></script>
+    </section>
+    
+</body>
+
+</html>
