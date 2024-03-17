@@ -31,8 +31,11 @@ const select = document.querySelector('.selectChose');
 const numberInput = document.querySelector('.numberInput');
 const dataInput = document.querySelector('.dataInput');
 const productInput = document.querySelector('.productInput');
+const countInput = document.querySelector('.accountInput');
 const accoutInput = document.querySelector('.accountInput');
 const selectReclamation = document.querySelector('.selectReclamation');
+const secoundProduckt = document.querySelector('.secoundProduckt');
+const thirdProduckt = document.querySelector('.thirdProduckt');
 
 const formError = document.querySelector('.form-error');
 
@@ -46,7 +49,7 @@ const checkError = () => {
 		emailInput.value !== '' &&
 		select.value !== '0'
 	) {
-		firstEl.classList.add('form-steps__item-count--current');
+		secoundEl.classList.add('form-steps__item-count--current');
 		firstForm.classList.add('active');
 		checkForm();
 	} else {
@@ -63,9 +66,8 @@ const checkForm = () => {
 		firstFormBtn.addEventListener('click', () => {
 			if (
 				numberInput.value !== '' &&
-				dataInput.value !== '' &&
+				// dataInput.value !== '' &&
 				productInput.value !== '' &&
-				accoutInput.value !== '' &&
 				selectReclamation.value !== '0'
 			) {
 				changeEl();
@@ -84,22 +86,12 @@ const checkForm = () => {
 };
 
 const changeEl = () => {
-	secoundEl.classList.add('form-steps__item-count--current');
-	formError.classList.add('active');
+	thirdEl.classList.add('form-steps__item-count--current');
+	firstFormBtn.classList.add('active');
+	sentTitle.classList.remove('active');
 	secoundForm.forEach((form) => {
 		form.classList.add('active');
 	});
-	sendForm.classList.remove('active');
-	firstFormBtn.textContent = 'Wyslij';
-
-	firstFormBtn.addEventListener('click', closeForm);
-};
-
-const closeForm = () => {
-	thirdEl.classList.add('form-steps__item-count--current');
-	sendForm.classList.add('active');
-	firstFormBtn.classList.add('active');
-	sentTitle.classList.remove('active');
 };
 
 btnHeart.addEventListener('click', () => {
@@ -112,8 +104,21 @@ btnBucket.addEventListener('click', () => {
 	bucketPopup.classList.toggle('active');
 });
 
+const checkEnter = (e) => {
+	if (e.key === 'Enter') {
+		secoundProduckt.classList.remove('active');
+		window.addEventListener('keyup', (e) => {
+			if (e.key === 'Enter') {
+				thirdProduckt.classList.remove('active');
+			}
+		});
+	}
+};
+
 delItems.forEach((item) => {
 	item.addEventListener('click', deleteItems);
 });
 
 firstFormBtn.addEventListener('click', checkError);
+
+window.addEventListener('keyup', checkEnter);

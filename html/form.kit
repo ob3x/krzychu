@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+    <!-- @Include 'nav' -->
+    <section class="form">
+        <h2 class="form__title">Formularz zwrotów</h2>
+        <p class="form__text">Nie spodobały ci się nasze usługi lub nie trafiłeś z rozmiarem, prezentem? Odeślij paczke
+            spowrotem jeśli spełnia warunki naszego regulaminu zwrotów</p>
+        <ul class="form-steps">
+            <li class="form-steps__item">
+                <span class="form-steps__item-count first-form form-steps__item-count--current">1</span>
+                <span class="form-steps__item-label">Twoje dane</span>
+            </li>
+            <li class="form-steps__item">
+                <span class="form-steps__item-count secound-form">2</span>
+                <span class="form-steps__item-label">Formularz zwrotu</span>
+            </li>
+            <li class="form-steps__item">
+                <span class="form-steps__item-count third-form">3</span>
+                <span class="form-steps__item-label">Wysyłanie</span>
+            </li>
+        </ul>
+
+
+
+
+
+        <div class="wrapper form-box">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Imię nazwisko</label>
+                <input type="text" class="form-item__input nameInput" placeholder="Andrzej Kowalski">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Adres email</label>
+                <input type="email" class="form-item__input emailInput" placeholder="mail@mail.com">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Wybierz formularz</label>
+                <select name="reclamation" class="form-item__input selectChose">
+                    <option value="0" disabled selected>Wybierz z listy</option>
+                    <option value="1">Formularz zwrotów</option>
+                    <option value="2">Formularz reklamacji</option>
+                    <option value="3">Formularz linku śledzącego</option>
+                    <option value="4">Formularz kontaktowy</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="wrapper secound-formBox returnForm-box active">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer zamówienia</label>
+                <input type="text" class="form-item__input numberInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Data otrzymania zamówienia</label>
+                <input type="text" class="form-item__input dataInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Powód zwrotu</label>
+                <select name="reclamation" class="form-item__input selectReclamation">
+                    <option value="0" disabled selected>Wybierz z listy</option>
+                    <option value="2">Ubranie nie spełnia moich oczekiwań</option>
+                    <option value="3">Ubranie jest w złym rozmiarze</option>
+                    <option value="1">Inne</option>
+                    <option value="4">Nie chcę podawać</option>
+                </select>
+            </div>
+            <div class="form-item">
+
+                <label for="text" class="form-item__name">Numer konta bankowego</label>
+                <input type="email" class="form-item__input accoutInput" placeholder="Wpisz tutaj (opcjonalnie)">
+            </div>
+            <div class="form-item returnForm-box__item">
+                <label for="text" class="form-item__name">Nazwa produktu</label>
+                <p class="form-item__text">Kliknij klawisz 'Enter' żeby dodać miejsce na następny produkt</p>
+                <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                <select name="number" class="returnForm-box__item-number">
+                    <option value="" class="returnForm-box__item-number-el">1</option>
+                    <option value="" class="returnForm-box__item-number-el">2</option>
+                    <option value="" class="returnForm-box__item-number-el">3</option>
+                    <option value="" class="returnForm-box__item-number-el">4</option>
+                </select>
+            </div>
+            <div class="form-item returnForm-box__item secoundProduckt active">
+                <label for="text" class="form-item__name">Produkt nr 2</label>
+                <input type="email" class="form-item__input" placeholder="Wpisz tutaj">
+                <select name="number" class="returnForm-box__item-number">
+                    <option value="" class="returnForm-box__item-number-el">1</option>
+                    <option value="" class="returnForm-box__item-number-el">2</option>
+                    <option value="" class="returnForm-box__item-number-el">3</option>
+                    <option value="" class="returnForm-box__item-number-el">4</option>
+                </select>
+            </div>
+            <div class="form-item returnForm-box__item thirdProduckt active">
+                <label for="text" class="form-item__name">Produkt nr 3</label>
+                <input type="email" class="form-item__input" placeholder="Wpisz tutaj">
+                <select name="number" class="returnForm-box__item-number">
+                    <option value="" class="returnForm-box__item-number-el">1</option>
+                    <option value="" class="returnForm-box__item-number-el">2</option>
+                    <option value="" class="returnForm-box__item-number-el">3</option>
+                    <option value="" class="returnForm-box__item-number-el">4</option>
+                </select>
+            </div>
+        </div>
+
+        </div>
+        <div class="wrapper secound-formBox reclamationForm-box active"></div>
+        <div class="wrapper secound-formBox trackForm-box active"></div>
+        <div class="wrapper secound-formBox contactForm-box active"></div>
+
+
+        <p class="nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
+
+        <div class="wrapper sent-form active">
+            <h2 class="sent-form__title">Pomyślnie wysłano</h2>
+            <p class="sent-form__text">Twój formularz został pomyślnie wysłany, postaramy się odpowiedzieć jak
+                najszybciej</p>
+        </div>
+
+
+
+
+        <button class="form__btn">Przejdź dalej</button>
+        <script src="dist/js/main.min.js"></script>
+    </section>
+    <!-- @Include 'footer' -->
+</body>
+
+</html>

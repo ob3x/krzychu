@@ -426,6 +426,11 @@ body {
 		&__name {
 			margin-bottom: 1em;
 		}
+		&__text {
+			position: absolute;
+			top: 25%;
+			font-size: 0.8rem;
+		}
 		&__input {
 			padding: 1em;
 			width: 25em;
@@ -457,6 +462,22 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
+	&__item {
+		position: relative;
+		&-number {
+			position: absolute;
+			right: 8%;
+			top: 41.5%;
+			padding: 0.85em;
+			font-size: 1.5rem;
+			border: 0.1em solid transparent;
+			border-left: 0.15em solid $black;
+			background-color: transparent;
+			&:focus {
+				outline: none;
+			}
+		}
+	}
 }
 .reclamationForm-box {
 	background-color: blue;
@@ -560,6 +581,11 @@ body {
 		}
 	}
 }
+@media (min-width: 430px) {
+	.returnForm-box__item-number {
+		right: 14%;
+	}
+}
 
 @media (min-width: 576px) {
 	.nav {
@@ -645,6 +671,9 @@ body {
 			width: 20em;
 		}
 	}
+	.returnForm-box__item-number {
+		right: 22%;
+	}
 }
 @media (min-width: 1100px) {
 	.form-item__input {
@@ -656,5 +685,8 @@ body {
 	}
 	.footer-box {
 		text-align: left;
+	}
+	.returnForm-box__item-number {
+		right: 14%;
 	}
 }
