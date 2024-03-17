@@ -123,11 +123,11 @@
                 <label for="email" class="form-item__name">Powód zwrotu</label>
                 <select name="reclamation" class="form-item__input selectReclamation">
                     <option value="0" disabled selected>Wybierz z listy</option>
-                    <option value="2">Niesatysfakcjonująca jakość produktu</option>
-                    <option value="3">Rozmiar jest nieodpowiednio dobrany</option>
-                    <option value="1">Produkt mi się nie podoba</option>
+                    <option value="1">Niesatysfakcjonująca jakość produktu</option>
+                    <option value="2">Rozmiar jest nieodpowiednio dobrany</option>
+                    <option value="3">Produkt mi się nie podoba</option>
                     <option value="4">Nie chcę podawać</option>
-                    <option value="4">Inne</option>
+                    <option value="5">Inne</option>
                 </select>
             </div>
             <div class="form-item">
@@ -136,34 +136,40 @@
             </div>
             <div class="form-item returnForm-box__item">
                 <label for="text" class="form-item__name">Nazwa produktu</label>
-                <p class="form-item__text">Kliknij klawisz 'Enter' żeby dodać miejsce na następny produkt</p>
-                <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
-                <select name="number" class="returnForm-box__item-number">
-                    <option value="" class="returnForm-box__item-number-el">1</option>
-                    <option value="" class="returnForm-box__item-number-el">2</option>
-                    <option value="" class="returnForm-box__item-number-el">3</option>
-                    <option value="" class="returnForm-box__item-number-el">4</option>
-                </select>
+                <p class="form-item__text">Kliknij klawisz 'Enter' żeby dodać następny produkt</p>
+                <div class="returnForm-box__place">
+                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <select name="number" class="returnForm-box__item-number">
+                        <option value="0" class="returnForm-box__item-number-el">1</option>
+                        <option value="1" class="returnForm-box__item-number-el">2</option>
+                        <option value="2" class="returnForm-box__item-number-el">3</option>
+                        <option value="3" class="returnForm-box__item-number-el">4</option>
+                    </select>
+                </div>
             </div>
             <div class="form-item returnForm-box__item secoundProduckt active">
                 <label for="text" class="form-item__name">Produkt nr 2</label>
-                <input type="email" class="form-item__input" placeholder="Wpisz tutaj">
-                <select name="number" class="returnForm-box__item-number">
-                    <option value="" class="returnForm-box__item-number-el">1</option>
-                    <option value="" class="returnForm-box__item-number-el">2</option>
-                    <option value="" class="returnForm-box__item-number-el">3</option>
-                    <option value="" class="returnForm-box__item-number-el">4</option>
-                </select>
+                <div class="returnForm-box__place">
+                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <select name="number" class="returnForm-box__item-number">
+                        <option value="0" class="returnForm-box__item-number-el">1</option>
+                        <option value="1" class="returnForm-box__item-number-el">2</option>
+                        <option value="2" class="returnForm-box__item-number-el">3</option>
+                        <option value="3" class="returnForm-box__item-number-el">4</option>
+                    </select>
+                </div>
             </div>
             <div class="form-item returnForm-box__item thirdProduckt active">
                 <label for="text" class="form-item__name">Produkt nr 3</label>
-                <input type="email" class="form-item__input" placeholder="Wpisz tutaj">
-                <select name="number" class="returnForm-box__item-number">
-                    <option value="" class="returnForm-box__item-number-el">1</option>
-                    <option value="" class="returnForm-box__item-number-el">2</option>
-                    <option value="" class="returnForm-box__item-number-el">3</option>
-                    <option value="" class="returnForm-box__item-number-el">4</option>
-                </select>
+                <div class="returnForm-box__place">
+                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <select name="number" class="returnForm-box__item-number">
+                        <option value="0" class="returnForm-box__item-number-el">1</option>
+                        <option value="1" class="returnForm-box__item-number-el">2</option>
+                        <option value="2" class="returnForm-box__item-number-el">3</option>
+                        <option value="3" class="returnForm-box__item-number-el">4</option>
+                    </select>
+                </div>
             </div>
         </div>
 
@@ -185,13 +191,15 @@
             </div>
             <div class="form-item returnForm-box__item">
                 <label for="text" class="form-item__name">Nazwa produktu</label>
-                <input type="email" class="form-item__input nameProduct" placeholder="Wpisz tutaj">
-                <select name="number" class="returnForm-box__item-number">
-                    <option value="" class="returnForm-box__item-number-el">1</option>
-                    <option value="" class="returnForm-box__item-number-el">2</option>
-                    <option value="" class="returnForm-box__item-number-el">3</option>
-                    <option value="" class="returnForm-box__item-number-el">4</option>
-                </select>
+                <div class="returnForm-box__place">
+                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <select name="number" class="returnForm-box__item-number">
+                        <option value="0" class="returnForm-box__item-number-el">1</option>
+                        <option value="1" class="returnForm-box__item-number-el">2</option>
+                        <option value="2" class="returnForm-box__item-number-el">3</option>
+                        <option value="3" class="returnForm-box__item-number-el">4</option>
+                    </select>
+                </div>
             </div>
             <div class="form-item">
                 <label for="email" class="form-item__name">Opis wady</label>
@@ -201,9 +209,9 @@
                 <label for="email" class="form-item__name">Roszczenia konsumenta</label>
                 <select name="reclamation" class="form-item__input selectBack">
                     <option value="0" disabled selected>Wybierz z listy</option>
-                    <option value="2">Nieodpłatna naprawa Produktu (usunięcie wady)</option>
-                    <option value="3">Nieodpłatna wymiana Produktu na nowy</option>
-                    <option value="1">Obniżenie ceny Produktu</option>
+                    <option value="1">Nieodpłatna naprawa Produktu (usunięcie wady)</option>
+                    <option value="2">Nieodpłatna wymiana Produktu na nowy</option>
+                    <option value="3">Obniżenie ceny Produktu</option>
                     <option value="4">Odstąpienie od umowy (jeżeli wada jest istotna)</option>
                 </select>
             </div>
