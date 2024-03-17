@@ -7,9 +7,9 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
@@ -110,14 +110,44 @@
             </div>
         </div>
 
-        <p class="nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
+        <div class="wrapper secound-formBox returnForm-box active">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer zamówienia</label>
+                <input type="text" class="form-item__input numberInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Data otrzymania zamówienia</label>
+                <input type="text" class="form-item__input dateInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="text" class="form-item__name">Nazwa produktu</label>
+                <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Powód reklamacji</label>
+                <select name="reclamation" class="form-item__input selectReclamation">
+                    <option value="0" disabled selected>Wybierz z listy</option>
+                    <option value="2">Ubranie nie spełnia moich oczekiwań</option>
+                    <option value="3">Ubranie jest w złym rozmiarze</option>
+                    <option value="1">Inne</option>
+                    <option value="4">Nie chcę podawać</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer konta bankowego</label>
+                <input type="email" class="form-item__input accoutInput" placeholder="Wpisz tutaj">
+            </div>
+        </div>
 
-        <div class="wrapper secound-formBox returnForm-box active"></div>
+        </div>
         <div class="wrapper secound-formBox reclamationForm-box active"></div>
         <div class="wrapper secound-formBox trackForm-box active"></div>
         <div class="wrapper secound-formBox contactForm-box active"></div>
 
         <div class="wrapper send-box active"></div>
+
+        <p class="nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
+
         <div class="wrapper sent-form active">
             <h2 class="sent-form__title">Pomyślnie wysłano</h2>
             <p class="sent-form__text">Twój formularz został pomyślnie wysłany, postaramy się odpowiedzieć jak
