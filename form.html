@@ -123,14 +123,14 @@
                 <label for="email" class="form-item__name">Powód zwrotu</label>
                 <select name="reclamation" class="form-item__input selectReclamation">
                     <option value="0" disabled selected>Wybierz z listy</option>
-                    <option value="2">Ubranie nie spełnia moich oczekiwań</option>
-                    <option value="3">Ubranie jest w złym rozmiarze</option>
-                    <option value="1">Inne</option>
+                    <option value="2">Niesatysfakcjonująca jakość produktu</option>
+                    <option value="3">Rozmiar jest nieodpowiednio dobrany</option>
+                    <option value="1">Produkt mi się nie podoba</option>
                     <option value="4">Nie chcę podawać</option>
+                    <option value="4">Inne</option>
                 </select>
             </div>
             <div class="form-item">
-
                 <label for="text" class="form-item__name">Numer konta bankowego</label>
                 <input type="email" class="form-item__input accoutInput" placeholder="Wpisz tutaj (opcjonalnie)">
             </div>
@@ -168,8 +168,62 @@
         </div>
 
         </div>
-        <div class="wrapper secound-formBox reclamationForm-box active"></div>
-        <div class="wrapper secound-formBox trackForm-box active"></div>
+
+
+        <div class="wrapper secound-formBox reclamationForm-box active">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer zamówienia</label>
+                <input type="text" class="form-item__input orderNumber" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Data otrzymania zamówienia</label>
+                <input type="text" class="form-item__input termOrder" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Data stwierdzenia wady</label>
+                <input type="text" class="form-item__input fixInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item returnForm-box__item">
+                <label for="text" class="form-item__name">Nazwa produktu</label>
+                <input type="email" class="form-item__input nameProduct" placeholder="Wpisz tutaj">
+                <select name="number" class="returnForm-box__item-number">
+                    <option value="" class="returnForm-box__item-number-el">1</option>
+                    <option value="" class="returnForm-box__item-number-el">2</option>
+                    <option value="" class="returnForm-box__item-number-el">3</option>
+                    <option value="" class="returnForm-box__item-number-el">4</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Opis wady</label>
+                <input type="text" class="form-item__input breakInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Roszczenia konsumenta</label>
+                <select name="reclamation" class="form-item__input selectBack">
+                    <option value="0" disabled selected>Wybierz z listy</option>
+                    <option value="2">Nieodpłatna naprawa Produktu (usunięcie wady)</option>
+                    <option value="3">Nieodpłatna wymiana Produktu na nowy</option>
+                    <option value="1">Obniżenie ceny Produktu</option>
+                    <option value="4">Odstąpienie od umowy (jeżeli wada jest istotna)</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer konta bankowego</label>
+                <input type="email" class="form-item__input accountNumber" placeholder="Wpisz tutaj (opcjonalnie)">
+            </div>
+        </div>
+
+
+        <div class="wrapper secound-formBox trackForm-box active">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Numer zamówienia</label>
+                <input type="text" class="form-item__input orderInput" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Link do śledzenia paczki</label>
+                <input type="text" class="form-item__input trackInput" placeholder="Wpisz tutaj">
+            </div>
+        </div>
         <div class="wrapper secound-formBox contactForm-box active"></div>
 
 
@@ -180,9 +234,6 @@
             <p class="sent-form__text">Twój formularz został pomyślnie wysłany, postaramy się odpowiedzieć jak
                 najszybciej</p>
         </div>
-
-
-
 
         <button class="form__btn">Przejdź dalej</button>
         <script src="dist/js/main.min.js"></script>
