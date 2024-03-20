@@ -35,9 +35,20 @@ const countInput = document.querySelector('.accountInput');
 const accoutInput = document.querySelector('.accountInput');
 const selectReclamation = document.querySelector('.selectReclamation');
 const secoundProduckt = document.querySelector('.secoundProduckt');
-const thirdProduckt = document.querySelector('.thirdProduckt');
+const orderInput = document.querySelector('.orderInput');
+const trackInput = document.querySelector('.trackInput');
+const formTextarea = document.querySelector('.contactForm-box__textarea');
+const contactNumber = document.querySelector('.contactNumber');
+
+const orderNumber = document.querySelector('.orderNumber');
+const termOrder = document.querySelector('.termOrder');
+const fixInput = document.querySelector('.fixInput');
+const nameProduct = document.querySelector('.nameProduct');
+const breakInput = document.querySelector('.breakInput');
+const selectBack = document.querySelector('.selectBack');
 
 const formError = document.querySelector('.form-error');
+const formTitle = document.querySelector('.form__title');
 
 const deleteItems = (e) => {
 	e.target.closest('.nav-heart__box').remove();
@@ -62,11 +73,12 @@ const checkForm = () => {
 	formError.classList.add('active');
 
 	if (selectVl == 1) {
+		formTitle.textContent = 'Formularz zwrotów';
 		returnForm.classList.remove('active');
 		firstFormBtn.addEventListener('click', () => {
 			if (
 				numberInput.value !== '' &&
-				// dataInput.value !== '' &&
+				dataInput.value !== '' &&
 				productInput.value !== '' &&
 				selectReclamation.value !== '0'
 			) {
@@ -76,13 +88,43 @@ const checkForm = () => {
 			}
 		});
 	} else if (selectVl == 2) {
+		formTitle.textContent = 'Formularz reklamacji';
 		reclamationForm.classList.remove('active');
+		firstFormBtn.addEventListener('click', () => {
+			if (
+				orderNumber.value !== '' &&
+				termOrder.value !== '' &&
+				fixInput.value !== '' &&
+				nameProduct.value !== '' &&
+				breakInput.value !== '' &&
+				selectBack.value !== '0'
+			) {
+				changeEl();
+			} else {
+				formError.classList.remove('active');
+			}
+		});
 	} else if (selectVl == 3) {
+		formTitle.textContent = 'Formularz linku śledzącego';
 		trackForm.classList.remove('active');
+		firstFormBtn.addEventListener('click', () => {
+			if (orderInput.value !== '' && trackInput.value !== '') {
+				changeEl();
+			} else {
+				formError.classList.remove('active');
+			}
+		});
 	} else if (selectVl == 4) {
+		formTitle.textContent = 'Formularz kontaktowy';
 		contactForm.classList.remove('active');
+		firstFormBtn.addEventListener('click', () => {
+			if (contactNumber.value !== '' && formTextarea.value !== '') {
+				changeEl();
+			} else {
+				formError.classList.remove('active');
+			}
+		});
 	}
-	// firstFormBtn.addEventListener('click', changeEl);
 };
 
 const changeEl = () => {
@@ -107,11 +149,9 @@ btnBucket.addEventListener('click', () => {
 const checkEnter = (e) => {
 	if (e.key === 'Enter') {
 		secoundProduckt.classList.remove('active');
-		window.addEventListener('keyup', (e) => {
-			if (e.key === 'Enter') {
-				thirdProduckt.classList.remove('active');
-			}
-		});
+	}
+	if (e.key === 'Backspace') {
+		secoundProduckt.classList.add('active');
 	}
 };
 

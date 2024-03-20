@@ -424,11 +424,12 @@ body {
 		width: 30em;
 		margin: 1em;
 		&__name {
-			margin-bottom: 1em;
+			margin-bottom: 1.5em;
 		}
 		&__text {
 			position: absolute;
-			top: 25%;
+			top: -30%;
+			left: 6%;
 			font-size: 0.8rem;
 		}
 		&__input {
@@ -436,6 +437,7 @@ body {
 			width: 25em;
 			height: 3.5em;
 			border: 0.2em solid $black;
+			border-radius: 0.1em;
 			background-color: $white;
 			color: $black;
 		}
@@ -462,15 +464,20 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	&__item {
+	&__place {
 		position: relative;
+	}
+	&__item {
 		&-number {
 			position: absolute;
-			right: 8%;
-			top: 41.5%;
-			padding: 0.85em;
+			right: 3%;
+			top: 50%;
+			transform: translate(0, -50%);
+			height: 100%;
+			padding: 0.6em;
 			font-size: 1.5rem;
-			border: 0.1em solid transparent;
+			color: $black;
+			border: transparent;
 			border-left: 0.15em solid $black;
 			background-color: transparent;
 			&:focus {
@@ -480,20 +487,29 @@ body {
 	}
 }
 .reclamationForm-box {
-	background-color: blue;
-	height: 10em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .trackForm-box {
-	background-color: yellow;
-	height: 10em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 .contactForm-box {
-	background-color: green;
-	height: 10em;
-}
-.send-box {
-	background-color: purple;
-	height: 10em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	&__textarea {
+		resize: vertical;
+		min-height: 15em;
+		padding: 1em;
+		width: 25em;
+		border: 0.2em solid $black;
+		border-radius: 0.1em;
+		background-color: $white;
+		color: $black;
+	}
 }
 
 .sent-form {
@@ -513,6 +529,18 @@ body {
 .active {
 	display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
 	padding-bottom: 5em;
@@ -579,11 +607,6 @@ body {
 				transform: translateY(0) scale(1);
 			}
 		}
-	}
-}
-@media (min-width: 430px) {
-	.returnForm-box__item-number {
-		right: 14%;
 	}
 }
 
@@ -671,9 +694,6 @@ body {
 			width: 20em;
 		}
 	}
-	.returnForm-box__item-number {
-		right: 22%;
-	}
 }
 @media (min-width: 1100px) {
 	.form-item__input {
@@ -685,8 +705,5 @@ body {
 	}
 	.footer-box {
 		text-align: left;
-	}
-	.returnForm-box__item-number {
-		right: 14%;
 	}
 }

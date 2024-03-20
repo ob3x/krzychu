@@ -77,7 +77,7 @@
             </li>
             <li class="form-steps__item">
                 <span class="form-steps__item-count secound-form">2</span>
-                <span class="form-steps__item-label">Formularz zwrotu</span>
+                <span class="form-steps__item-label form-steps__item-label--form">Wypełnij Formularz</span>
             </li>
             <li class="form-steps__item">
                 <span class="form-steps__item-count third-form">3</span>
@@ -151,6 +151,7 @@
                 <label for="text" class="form-item__name">Produkt nr 2</label>
                 <div class="returnForm-box__place">
                     <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <p class="form-item__text">Kliknij klawisz 'backspace' żeby usunąć produkt</p>
                     <select name="number" class="returnForm-box__item-number">
                         <option value="0" class="returnForm-box__item-number-el">1</option>
                         <option value="1" class="returnForm-box__item-number-el">2</option>
@@ -159,18 +160,7 @@
                     </select>
                 </div>
             </div>
-            <div class="form-item returnForm-box__item thirdProduckt active">
-                <label for="text" class="form-item__name">Produkt nr 3</label>
-                <div class="returnForm-box__place">
-                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
-                    <select name="number" class="returnForm-box__item-number">
-                        <option value="0" class="returnForm-box__item-number-el">1</option>
-                        <option value="1" class="returnForm-box__item-number-el">2</option>
-                        <option value="2" class="returnForm-box__item-number-el">3</option>
-                        <option value="3" class="returnForm-box__item-number-el">4</option>
-                    </select>
-                </div>
-            </div>
+        </div>
         </div>
 
         </div>
@@ -232,10 +222,19 @@
                 <input type="text" class="form-item__input trackInput" placeholder="Wpisz tutaj">
             </div>
         </div>
-        <div class="wrapper secound-formBox contactForm-box active"></div>
+        <div class="wrapper secound-formBox contactForm-box active">
+            <div class="form-item">
+                <label for="text" class="form-item__name">Tytuł problemu</label>
+                <input type="text" class="form-item__input contactNumber" placeholder="Wpisz tutaj">
+            </div>
+            <div class="form-item">
+                <label for="email" class="form-item__name">Wiadomość</label>
+                <textarea placeholder="Wpisz tutaj" class="contactForm-box__textarea"></textarea>
+            </div>
+        </div>
 
 
-        <p class="nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
+        <p class=" nav-loggin__error form-error active">Uzupełnij wszystkie pola</p>
 
         <div class="wrapper sent-form active">
             <h2 class="sent-form__title">Pomyślnie wysłano</h2>
