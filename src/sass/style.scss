@@ -27,11 +27,34 @@ body {
 }
 
 .nav {
-	position: sticky;
+	position: fixed;
 	top: 0;
+	width: 100%;
 	background-color: $white;
+	border-top: 0.1em solid $black;
 	border-bottom: 0.1em solid $black;
 	z-index: 1000;
+	&-links {
+		position: absolute;
+		left: 45%;
+		transform: translate(-50%, 0);
+		text-transform: uppercase;
+		&__item {
+			position: relative;
+			margin: 0 0.5em;
+			color: $black;
+			text-decoration: none;
+			letter-spacing: 0.15em;
+			font-size: 1rem;
+			&::after {
+				@include textAnimation;
+			}
+			&:hover::after {
+				transform: scale(1);
+				transform-origin: left;
+			}
+		}
+	}
 	&-items {
 		display: flex;
 		justify-content: space-between;
@@ -40,8 +63,8 @@ body {
 	&-logo {
 		background-image: url(../../dist/img/logo.jpg);
 		@include background;
-		height: 3.7em;
-		width: 7.5em;
+		height: 2em;
+		width: 3.5em;
 		margin: 1.5em;
 	}
 	&-box {
@@ -180,9 +203,13 @@ body {
 }
 
 .notification {
-	padding: 0.7em;
+	position: absolute;
+	top: 5.2em;
+	width: 100%;
+	padding: 1.2em;
+	background-color: $white;
 	text-align: center;
-	border-bottom: 0.1em solid $black;
+	z-index: 1000;
 	&__text {
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
@@ -205,146 +232,223 @@ body {
 	}
 }
 
-.chose {
-	text-align: center;
+.trailer {
+	position: relative;
 	overflow: hidden;
-	&__title {
-		@include title;
-	}
-	&__text {
-		@include text;
-		padding: 0 1em;
+	&__img {
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		object-fit: cover;
 	}
 	&-box {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		&__item {
-			&-img {
-				position: relative;
-				@include background;
-				background-image: url(../../dist/img/woman-model.jpg);
-				margin: 5em;
-				height: 60em;
-				width: 40em;
-				&:hover {
-					.chose-box__item-img__hero {
-						opacity: 1;
-					}
-				}
-				&__hero {
-					position: absolute;
-					top: 0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					content: '';
-					background-color: rgba(0, 0, 0, 0.3);
-					opacity: 0;
-					cursor: pointer;
-					transition: opacity 0.3s;
-				}
-				&--btn {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					color: $white;
-					font-size: 3rem;
-					text-transform: uppercase;
-					letter-spacing: 0.1em;
-				}
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-top: 3em;
+		font-size: 1.7rem;
+		text-align: center;
+		color: $white;
+		&__title {
+			text-transform: uppercase;
+			font-weight: 900;
+		}
+		&__text {
+			letter-spacing: 0.1em;
+			font-weight: 300;
+			margin: 0.7em 0 1em;
+		}
+		&__items {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 16em;
+		}
+		&__btn {
+			@include btn;
+			padding: 0.7em 1em;
+			background-color: $white;
+			color: $black;
+			text-decoration: none;
+			transition: color 0.3s background-color 0.3s;
+			border: 0.1em solid $white;
+			border-radius: 0.3em;
+			&:hover {
+				background-color: transparent;
+				color: $white;
+			}
+		}
+		&__stop {
+			background-image: url(../../src/img/src/stop.svg);
+			background-repeat: no-repeat;
+			width: 3.5em;
+			height: 3.5em;
+			border-radius: 50%;
+			transition: transform 0.3s;
+			&:hover {
+				transform: scale(1.1);
 			}
 		}
 	}
+}
+
+.play {
+	background-image: url(../../src/img/src/play.svg);
 }
 
 .news {
-	padding-bottom: 5em;
 	text-align: center;
 	&__title {
 		@include title;
-	}
-	&__text {
-		@include text;
-		padding: 0 1em 3em;
-	}
-	&-box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 5em;
-	}
-	&-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		text-decoration: none;
-		color: $black;
-		&__img {
-			width: 50%;
-			object-fit: cover;
-			transition: transform 0.3s;
-			&:hover {
-				transform: scale(1.05);
-			}
-		}
-		&__title {
-			margin: 1em 0 0.4em;
-			font-size: 1.5rem;
-			text-transform: uppercase;
-			letter-spacing: 0.1em;
-		}
-		&__text {
-			font-size: 1.2rem;
-			color: $grey;
-			margin-bottom: 0.5em;
-		}
-		&__price {
-			font-size: 1.5rem;
-			text-decoration: underline;
-			letter-spacing: 0.1em;
-		}
-	}
-	&-link {
-		position: relative;
-		padding: 1em 3em;
-		font-size: 1.5rem;
-		border: 0.1em solid $black;
-		color: $black;
-		text-transform: uppercase;
-		text-decoration: none;
-		&:hover {
-			color: $white;
-		}
-		&::after {
-			@include btnAnimation;
-			background-color: $black;
-			border: 0.1em solid $black;
-		}
-		&:hover::after {
-			transform: translateY(0) scale(1);
-		}
-	}
-}
-
-.sesion {
-	text-align: center;
-	&__title {
-		@include title;
-	}
-	&__text {
-		@include text;
 	}
 	&-box {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-wrap: wrap;
-		padding: 3em 0 10em;
+	}
+	&-item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		color: $black;
+		&__line {
+			margin-top: 2.5em;
+			width: 20em;
+			height: 0.1em;
+			background-color: $black;
+		}
+		&__secoundLine {
+			margin-top: 2em;
+			width: 15em;
+			height: 0.1em;
+			background-color: $black;
+		}
+		&-img {
+			background-image: url(../../dist/img/Untitled-1.png);
+			@include background;
+			margin-top: 2em;
+			width: 28em;
+			height: 39em;
+			&:hover {
+				background-image: url(../../dist/img/united-2.png);
+			}
+		}
+		&__title {
+			margin: 1em 0 0.4em;
+			font-size: 1.8rem;
+			font-weight: 500;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+		&__text {
+			font-size: 1.4rem;
+			color: $grey;
+			margin-bottom: 0.5em;
+		}
+		&__price {
+			font-size: 1.8rem;
+			font-weight: 500;
+			letter-spacing: 0.1em;
+		}
+	}
+}
+
+// .heart-red {
+// 	background-image: url(../../src/img/src/heartActive.svg);
+// }
+
+.firstBaner {
+	position: relative;
+	margin-top: 15em;
+	background-image: url(../../dist/img/firstBaner.jpg);
+	@include background;
+	height: 60em;
+	z-index: 1;
+	overflow: hidden;
+	&-hero {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: -1;
+	}
+	&-box {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		padding: 4em;
+		height: 100%;
+		color: $white;
+		&__title {
+			font-size: 3rem;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		&__text {
+			margin: 0.7em 0 1.6em;
+			letter-spacing: 0.1em;
+			font-size: 1.5rem;
+		}
+		&__btn {
+			@include btn;
+			text-align: center;
+			padding: 0.5em 1em;
+			width: 10em;
+			background-color: $white;
+			color: $black;
+			text-decoration: none;
+			border: 0.1em solid $white;
+			font-size: 2rem;
+			border-radius: 0.3em;
+			&:hover {
+				background-color: transparent;
+				color: $white;
+			}
+		}
+	}
+}
+
+.secoundBaner {
+	background-image: url(../../dist/img/wallpapersden.com_usa-4k-desert_3840x1920.jpg);
+}
+
+.sesion {
+	&__title {
+		@include title;
+		text-align: center;
+	}
+	&-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		&__texts {
+			margin: 1em;
+		}
 		&__item {
 			width: 35em;
+			margin: 1em 1em 0;
+			overflow: hidden;
+			&-title {
+				font-size: 2rem;
+			}
+			&-text {
+				margin: 0.7em 0;
+				font-size: 1.2rem;
+				letter-spacing: 0.05em;
+			}
+			&-btn {
+				text-decoration: none;
+				font-size: 1.5rem;
+				color: $black;
+			}
 		}
 	}
 }
@@ -357,6 +461,7 @@ body {
 	font-size: 1.5rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
+	margin-top: 5em;
 	&__title {
 		@include title;
 	}
@@ -530,20 +635,216 @@ body {
 	display: none;
 }
 
+.shop-nav {
+	position: sticky;
+	top: 6.75em;
+	background-color: $white;
+	border-bottom: 0.1em solid $black;
+	z-index: 1000;
+	&__box {
+		display: flex;
+		align-items: center;
+		text-transform: uppercase;
+	}
+	&__item {
+		margin: 1em 2em;
+		padding: 1em;
+		width: 12em;
+		// height: 18em;
+		line-height: 2.3em;
+		cursor: pointer;
+		&-title {
+			position: relative;
+			display: inline;
+			&::after {
+				@include textAnimation;
+			}
+			&:hover::after {
+				transform: scale(1);
+				transform-origin: left;
+			}
+			&--sale {
+				color: red;
+				&::after {
+					background-color: red;
+				}
+			}
+		}
+		&-list {
+			position: absolute;
+			margin-top: 0.5em;
+			list-style-type: none;
+			&--item {
+				display: none;
+				// opacity: 0;
+				font-size: 1.4rem;
+			}
+		}
+	}
+}
 
+.men-gui {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	&__title {
+		@include title;
+	}
+	&__text {
+		@include text;
+	}
+	&__tools {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		&-count {
+			margin-right: 0.5em;
+		}
+		&-price {
+			background-color: transparent;
+			border: 0.1em solid transparent;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+		}
+	}
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 4em 0;
+		&-item {
+			width: 35em;
+			padding: 2em;
+		}
+	}
+}
 
+.sesionMain {
+	margin-top: 0;
+	&__title {
+		font-size: 8rem;
+	}
+	&__text {
+		font-size: 2rem;
+	}
+	&__btn {
+		padding: 1em 0;
+		width: 15em;
+	}
+}
+.firstSection {
+	text-align: center;
+	padding: 5em 1em;
+	&-box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	&__title {
+		@include title;
+		padding-bottom: 0.5em;
+	}
+	&__text {
+		@include text;
+		font-size: 2rem;
+		margin-bottom: 2em;
+	}
+}
 
-
-
-
-
-
-
-
-
+.rules {
+	text-align: left;
+	&-menu {
+		position: sticky;
+		top: 4.6em;
+		padding: 1em;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		background-color: $white;
+		border-bottom: 0.1em solid $black;
+		&__list {
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			list-style-type: none;
+			height: 100%;
+			&-link {
+				color: $black;
+				text-decoration: none;
+			}
+			&-item {
+				position: relative;
+				margin: 0 2.5em;
+				cursor: pointer;
+				&-active {
+					font-weight: bold;
+				}
+				&::after {
+					@include textAnimation;
+					background-color: $black;
+				}
+				&:hover::after {
+					transform: scale(1);
+					transform-origin: left;
+				}
+			}
+		}
+	}
+	&__title {
+		margin-top: 1em;
+	}
+	&-box {
+		padding: 0 5em;
+	}
+	&-box {
+		&__title {
+			margin: 1em 0;
+			font-size: 2rem;
+			font-weight: bold;
+			&-bold {
+				text-align: center;
+				font-size: 3rem;
+				text-transform: uppercase;
+			}
+		}
+		&__text {
+			line-height: 1.8em;
+			font-size: 1.5rem;
+			&-link {
+				position: relative;
+				color: $black;
+				z-index: 1;
+				&::after {
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 0;
+					background-color: $black;
+					transition: height 0.5s;
+					content: '';
+					z-index: -1;
+				}
+				&:hover {
+					color: $white;
+					text-decoration: none;
+				}
+				&:hover::after {
+					height: 100%;
+				}
+			}
+			&-titles {
+				font-weight: bold;
+			}
+		}
+	}
+}
 
 .footer {
-	padding-bottom: 5em;
+	padding: 5em 0;
 	border-top: 0.1em solid $black;
 	&-box {
 		display: flex;
@@ -571,16 +872,7 @@ body {
 				text-decoration: none;
 				color: $grey;
 				&::after {
-					position: absolute;
-					top: 100%;
-					left: 0;
-					background-color: $grey;
-					width: 100%;
-					height: 0.1em;
-					transform: scale(0);
-					transform-origin: right;
-					transition: transform 0.5s;
-					content: '';
+					@include textAnimation;
 				}
 				&:hover::after {
 					transform: scale(1);
@@ -612,6 +904,10 @@ body {
 
 @media (min-width: 576px) {
 	.nav {
+		&-logo {
+			width: 7.5em;
+			height: 3.7em;
+		}
 		&-box__item {
 			margin: 2em;
 		}
@@ -621,18 +917,10 @@ body {
 		&-heart {
 			right: 15em;
 		}
-	}
-	.chose {
-		&-box {
-			flex-direction: row;
-			&__item-img {
-				margin: 2em;
-				width: 25em;
-				height: 35em;
+		&-links {
+			&__item {
+				font-size: 1.1rem;
 			}
-		}
-		&__title {
-			font-size: 3rem;
 		}
 	}
 	.form {
@@ -647,24 +935,32 @@ body {
 		font-size: 1.2rem;
 	}
 	.news__title {
-		font-size: 3rem;
+		font-size: 5rem;
 	}
 	.sesion__title {
-		font-size: 3rem;
+		font-size: 5rem;
 	}
 	.sent-form__title {
-		font-size: 3rem;
+		font-size: 5rem;
+	}
+	.men-gui__title {
+		font-size: 5rem;
 	}
 	.footer-item {
 		margin: 1em;
 	}
+	.firstBaner-box_-title {
+		font-size: 4.5rem;
+	}
+	.sesion-box__item {
+		width: 50em;
+		margin: 1em;
+	}
+	.firstSection__title {
+		font-size: 5rem;
+	}
 }
 @media (min-width: 768px) {
-	.chose-box__item-img {
-		margin: 2em;
-		width: 35em;
-		height: 50em;
-	}
 	.footer-item {
 		&__title {
 			margin-bottom: 1em;
@@ -676,13 +972,23 @@ body {
 			margin-bottom: 2em;
 		}
 	}
+	.firstBaner-box {
+		align-items: start;
+	}
+	.secoundBaner-box {
+		align-items: end;
+	}
+	.nav {
+		&-links {
+			left: 50%;
+			&__item {
+				margin: 0 1.3em;
+				font-size: 1.4rem;
+			}
+		}
+	}
 }
 @media (min-width: 992px) {
-	.chose-box__item-img {
-		margin: 5em;
-		width: 40em;
-		height: 60em;
-	}
 	.form {
 		&-box {
 			flex-wrap: nowrap;
@@ -693,6 +999,12 @@ body {
 		&-item__input {
 			width: 20em;
 		}
+	}
+	.trailer-box {
+		top: 70%;
+		left: 80%;
+		text-align: right;
+		font-size: 2rem;
 	}
 }
 @media (min-width: 1100px) {

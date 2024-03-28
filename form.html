@@ -14,23 +14,29 @@
 </head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav" id="navbar">
     <div class="wrapper nav-items">
         <a href="index.html">
             <div class="nav-logo"></div>
         </a>
+        <div class="nav-links">
+            <a href="#" class="nav-links__item">Nowa kolekcja</a>
+            <a href="#" class="nav-links__item">Wyprzedaż</a>
+        </div>
         <div class="nav-box">
             <div class="nav-box__item nav-box__item-heart popup"></div>
             <div class="nav-heart active popup-box">
                 <h3 class="nav-loggin__title">polubione</h3>
-                <div class="nav-heart__box">
-                    <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
-                    <a href="#" class="nav-heart__box-text">
-                        <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
-                        <p class="nav-heart__box-text--item">Koszulki damskie</p>
-                        <p class="nav-heart__box-text--price">199,99 PLN</p>
-                    </a>
-                    <div class="nav-heart__box-img"></div>
+                <div class="heart-box">
+                    <div class="nav-heart__box">
+                        <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
+                        <a href="#" class="nav-heart__box-text">
+                            <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
+                            <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                            <p class="nav-heart__box-text--price">199,99 PLN</p>
+                        </a>
+                        <div class="nav-heart__box-img"></div>
+                    </div>
                 </div>
                 <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do polubionych</a>
             </div>
@@ -182,7 +188,7 @@
             <div class="form-item returnForm-box__item">
                 <label for="text" class="form-item__name">Nazwa produktu*</label>
                 <div class="returnForm-box__place">
-                    <input type="email" class="form-item__input productInput" placeholder="Wpisz tutaj">
+                    <input type="email" class="form-item__input productCount" placeholder="Wpisz tutaj">
                     <select name="number" class="returnForm-box__item-number">
                         <option value="0" class="returnForm-box__item-number-el">1</option>
                         <option value="1" class="returnForm-box__item-number-el">2</option>
@@ -243,7 +249,7 @@
         </div>
 
         <button class="form__btn">Przejdź dalej</button>
-        <script src="dist/js/main.min.js"></script>
+        <script src="dist/js/form.min.js"></script>
     </section>
     <footer class="footer">
     <div class="wrapper">
@@ -251,12 +257,15 @@
             <div class="footer-item">
                 <h2 class="footer-item__title">Zasady i warunki</h2>
                 <ul class="footer-item__list">
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Polityka zwrotów i
+                    <li class="footer-item__list-link"><a href="return-policy.html"
+                            class="footer-item__list-style">Polityka zwrotów i
                             reklamacji</a>
                     </li>
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Regulamin</a>
+                    <li class="footer-item__list-link"><a href="rules.html"
+                            class="footer-item__list-style">Regulamin</a>
                     </li>
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Polityka
+                    <li class="footer-item__list-link"><a href="privacy policy.html"
+                            class="footer-item__list-style">Polityka
                             prywatności</a>
                     </li>
                 </ul>

@@ -36,14 +36,16 @@
             <div class="nav-box__item nav-box__item-heart popup"></div>
             <div class="nav-heart active popup-box">
                 <h3 class="nav-loggin__title">polubione</h3>
-                <div class="nav-heart__box">
-                    <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
-                    <a href="#" class="nav-heart__box-text">
-                        <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
-                        <p class="nav-heart__box-text--item">Koszulki damskie</p>
-                        <p class="nav-heart__box-text--price">199,99 PLN</p>
-                    </a>
-                    <div class="nav-heart__box-img"></div>
+                <div class="heart-box">
+                    <div class="nav-heart__box">
+                        <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
+                        <a href="#" class="nav-heart__box-text">
+                            <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
+                            <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                            <p class="nav-heart__box-text--price">199,99 PLN</p>
+                        </a>
+                        <div class="nav-heart__box-img"></div>
+                    </div>
                 </div>
                 <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do polubionych</a>
             </div>
@@ -92,67 +94,72 @@
     </section>
     <section class="news">
         <h2 class="news__title">Przeglądaj nowości</h2>
-        <!-- <p class="news__text">Nie przegap żadnych nadchodzących nowości z najbardziej pożadanych kolekcji</p> -->
         <div class="news-box">
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Żółta koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">199,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Biała koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">249,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Żółta koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">99,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Żółta koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">199,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Biała koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">249,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
             <div class="news-box__item">
-                <div class="news-item">
+                <a class="news-item" href="#">
                     <div class="news-item-img">
-                        <div class="news-item-img__heart"></div>
                     </div>
+                    <div class="news-item__line"></div>
                     <h3 class="news-item__title">Żółta koszulka</h3>
                     <p class="news-item__text">Koszulki damskie</p>
                     <p class="news-item__price">99,99 PLN</p>
-                </div>
+                    <div class="news-item__secoundLine"></div>
+                </a>
             </div>
         </div>
     </section>
@@ -161,16 +168,38 @@
         <div class="firstBaner-box wrapper">
             <h2 class="firstBaner-box__title">Tytul baneru 1</h2>
             <p class="firstBaner-box__text">Opis baneru z tytulem baneru nr 1</p>
-            <a href="" class="firstBaner-box__btn">Kup teraz</a>
+            <a href="#" class="firstBaner-box__btn">Kup teraz</a>
         </div>
     </section>
     <section class="sesion">
         <h2 class="sesion__title">Sesja zdjęciowa</h2>
-        <div>
-            <div class="sesion-box">
+        <div class="sesion-box">
+            <div class="sesion-box__item">
                 <img src="dist/img/sesion1.jpg" alt="model" class="sesion-box__item">
+                <div class="sesion-box__texts">
+                    <h2 class="sesion-box__item-title">Dash of extravagance</h2>
+                    <p class="sesion-box__item-text">Stand out from the crowd in eye-catching jewellery from top brands
+                    </p>
+                    <a href="sesion.html" class="sesion-box__item-btn">Przeglądaj</a>
+                </div>
+            </div>
+            <div class="sesion-box__item">
                 <img src="dist/img/sesion2.jpg" alt="model" class="sesion-box__item">
+                <div class="sesion-box__texts">
+                    <h2 class="sesion-box__item-title">Dress to impress</h2>
+                    <p class="sesion-box__item-text">Special occasions deserve special styles!</p>
+                    <a href="sesion.html" class="sesion-box__item-btn">Przeglądaj</a>
+                </div>
+            </div>
+            <div class="sesion-box__item">
                 <img src="dist/img/sesion3.jpg" alt="model" class="sesion-box__item">
+                <div class="sesion-box__texts">
+                    <h2 class="sesion-box__item-title">For the real it-girls</h2>
+                    <p class="sesion-box__item-text">These bag models will successfully play a leading role in your
+                        looks
+                    </p>
+                    <a href="sesion.html" class="sesion-box__item-btn">Przeglądaj</a>
+                </div>
             </div>
         </div>
     </section>
@@ -179,7 +208,7 @@
         <div class="firstBaner-box secoundBaner-box wrapper">
             <h2 class="firstBaner-box__title">Tytul baneru 2</h2>
             <p class="firstBaner-box__text">Opis baneru z tytulem baneru nr 2</p>
-            <a href="" class="firstBaner-box__btn">Kup teraz</a>
+            <a href="#" class="firstBaner-box__btn">Kup teraz</a>
         </div>
     </section>
     <footer class="footer">
@@ -188,12 +217,15 @@
             <div class="footer-item">
                 <h2 class="footer-item__title">Zasady i warunki</h2>
                 <ul class="footer-item__list">
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Polityka zwrotów i
+                    <li class="footer-item__list-link"><a href="return-policy.html"
+                            class="footer-item__list-style">Polityka zwrotów i
                             reklamacji</a>
                     </li>
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Regulamin</a>
+                    <li class="footer-item__list-link"><a href="rules.html"
+                            class="footer-item__list-style">Regulamin</a>
                     </li>
-                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Polityka
+                    <li class="footer-item__list-link"><a href="privacy policy.html"
+                            class="footer-item__list-style">Polityka
                             prywatności</a>
                     </li>
                 </ul>
