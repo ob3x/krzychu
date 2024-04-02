@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+    <nav class="nav" id="navbar">
+    <div class="wrapper nav-items">
+        <a href="index.html">
+            <div class="nav-logo"></div>
+        </a>
+        <div class="nav-links">
+            <a href="#" class="nav-links__item">Nowa kolekcja</a>
+            <a href="#" class="nav-links__item">Wyprzedaż</a>
+        </div>
+        <div class="nav-box">
+            <div class="nav-box__item nav-box__item-heart popup"></div>
+            <div class="nav-heart active popup-box">
+                <h3 class="nav-loggin__title">polubione</h3>
+                <div class="heart-box">
+                    <div class="nav-heart__box">
+                        <img src="dist/img/items1.jpg" alt="koszulka" class="nav-heart__box-item">
+                        <a href="#" class="nav-heart__box-text">
+                            <h3 class="nav-heart__box-text--title">żółta koszulka</h3>
+                            <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                            <p class="nav-heart__box-text--price">199,99 PLN</p>
+                        </a>
+                        <div class="nav-heart__box-img"></div>
+                    </div>
+                </div>
+                <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do polubionych</a>
+            </div>
+            <div class="nav-box__item nav-box__item-bucket popup"></div>
+            <div class="nav-bucket active popup-box">
+                <h3 class="nav-loggin__title">twój koszyk</h3>
+                <div class="nav-heart__box">
+                    <img src="dist/img/items2.jpg" alt="koszulka" class="nav-heart__box-item">
+                    <a href="#" class="nav-heart__box-text">
+                        <h3 class="nav-heart__box-text--title">biała koszulka</h3>
+                        <p class="nav-heart__box-text--item">Koszulki damskie</p>
+                        <p class="nav-heart__box-text--price">249,99 PLN</p>
+                    </a>
+                    <div class="nav-heart__box-img"></div>
+                </div>
+                <a href="#" class="nav-loggin__btn nav-heart__btn">przejdź do koszyka</a>
+            </div>
+            <div class="nav-box__item nav-box__item-account popup"></div>
+            <div class="nav-loggin active popup-box">
+                <h3 class="nav-loggin__title">zaloguj się</h3>
+                <input type="text" placeholder="Wpisz swój email" class="nav-loggin__input">
+                <input type="password" placeholder="Wpisz swóje hasło" class="nav-loggin__input">
+                <div class="nav-loggin-box">
+                    <input type="checkbox" class="nav-loggin-box__item">
+                    <p class="nav-loggin-box__text">Zapamiętaj mnie</p>
+                </div>
+                <button class="nav-loggin__btn nav-loggin__btn--first">zaloguj się</button>
+                <!-- <p class="nav-loggin__error">Błędny email lub hasło</p> -->
+                <a class="nav-loggin__text" href="#">Przypomnij hasło</a>
+                <h3 class="nav-loggin__title">stwórz konto</h3>
+                <button class="nav-loggin__btn">zarejestruj się</button>
+            </div>
+        </div>
+    </div>
+</nav>
+    <header class="road">
+    <ul class="road-list">
+        <a href="#" class="road-list__item-link">
+            <li class="road-list__item">Ravish.com</li>
+        </a>
+        <span class="road-list__span">/</span>
+        <a href="#" class="road-list__item-link">
+            <li class="road-list__item">On</li>
+        </a>
+        <span class="road-list__span">/</span>
+        <a href="#" class="road-list__item-link">
+            <li class="road-list__item">Koszulki</li>
+        </a>
+        <span class="road-list__span">/</span>
+        <a href="#" class="road-list__item-link">
+            <li class="road-list__item road-list__item-active">Wiosenna kolekcja</li>
+        </a>
+    </ul>
+</header>
+    <div class="overlay active"></div>
+    <div class="popup-item active">
+        <div class="popup-item__x"></div>
+        <table class="popup-item__table">
+            <thead class="popup-item__head">
+                <tr class="popup-item__head-tr">
+                    <th class="popup-item__head-tr--item">Rozmiar</th>
+                    <th class="popup-item__head-tr--item">Szerokość</th>
+                    <th class="popup-item__head-tr--item">Długość</th>
+                    <th class="popup-item__head-tr--item">Pas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="popup-item__box">
+                    <td class="popup-item__head-tr--item">S</td>
+                    <td class="popup-item__box-color">50 - 54</td>
+                    <td>70 - 12</td>
+                    <td class="popup-item__box-color">80 - 12</td>
+                </tr>
+                <tr class="popup-item__box">
+                    <td class="popup-item__head-tr--item">M</td>
+                    <td class="popup-item__box-color">55 - 60</td>
+                    <td>75 - 12</td>
+                    <td class="popup-item__box-color">85 - 12</td>
+                </tr>
+                <tr class="popup-item__box">
+                    <td class="popup-item__head-tr--item">L</td>
+                    <td class="popup-item__box-color">60 - 12</td>
+                    <td>80 - 12</td>
+                    <td class="popup-item__box-color">90 - 12</td>
+                </tr>
+                <tr class="popup-item__box">
+                    <td class="popup-item__head-tr--item">XL</td>
+                    <td class="popup-item__box-color">65 - 12</td>
+                    <td>85 - 12</td>
+                    <td class="popup-item__box-color">95 - 12</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <section class="item">
+        <div class="item-box">
+            <div class="item-left">
+                <div class="item-left__box">
+                    <img src="/dist/img/united-2.png" alt="koszulka" class="item-left__box--img">
+                    <img src="/dist/img/Untitled-1.png" alt="koszulka" class="item-left__box--img">
+                    <img src="/dist/img/united-2.png" alt="koszulka" class="item-left__box--img">
+                    <img src="/dist/img/Untitled-1.png" alt="koszulka" class="item-left__box--img">
+                </div>
+                <div class="item-left__main">
+                    <img src="/dist/img/Untitled-1.png" class="item-left__img" alt="koszulka">
+                    <img src="/dist/img/Untitled-1.png" class="item-left__img" alt="koszulka">
+                </div>
+            </div>
+
+            <div class="item-right">
+                <div class="item-right__heart">
+                    <h1 class="item-right__title">Czarna koszulka</h1>
+                    <div class="item-right__heart-icon"></div>
+                </div>
+                <p class="item-right__name">Wiosenna kolekcja</p>
+                <p class="item-right__price">359,99 <span class="item-right__price--value">zł</span></p>
+                <h2 class="item-right__colors-title">Dostępne rozmiary</h2>
+                <div class="item-right__sizes">
+                    <button class="item-right__sizes-item">S</button>
+                    <button class="item-right__sizes-item">M</button>
+                    <button class="item-right__sizes-item">L</button>
+                    <button class="item-right__sizes-item">XL</button>
+                    <button class="item-right__sizes-item">XXL</button>
+                </div>
+                <div class="item-right__sizesText">
+                    <div class="item-right__sizesText-icon"></div>
+                    <p class="item-right__sizesText-text">Tabela rozmiarów</p>
+                </div>
+                <h2 class="item-right__colors-title">Dostępne kolory</h2>
+                <div class="item-right__colors">
+                    <div class="item-right__colors-item item-right__colors-item--purple"></div>
+                    <div class="item-right__colors-item item-right__colors-item--green"></div>
+                    <div class="item-right__colors-item item-right__colors-item--black"></div>
+                    <div class="item-right__colors-item item-right__colors-item--yellow"></div>
+                </div>
+                <div class="item-right__count">
+                    <button class="item-right__count-btn item-minus"><span
+                            class="item-right__count-icon">-</span></button>
+                    <p class="item-right__count-value">1</p>
+                    <button class="item-right__count-btn item-plus"><span
+                            class="item-right__count-icon">+</span></button>
+                </div>
+                <div class="item-right__box">
+                    <button class="item-right__box--btn">
+                        <div class="item-right__box--btn-icon"></div>Dodaj do koszyka
+                    </button>
+                    <div class="item-right__textBox">
+                        <div class="item-right__box-pack"></div>
+                        <p class="item-right__box-text">
+                            Darmowa dostawa i zwroty przy zamówieniach powyżej
+                            200zł.</p>
+                    </div>
+                    <div class="item-right__textBox">
+                        <div class="item-right__box-pack item-right__box-pack-return"></div>
+                        <p class="item-right__box-text">
+                            Zwrot aż do 14 dni!</p>
+                    </div>
+                    <div class="item-right__textBox">
+                        <div class="item-right__box-pack item-right__box-pack-delivery"></div>
+                        <p class="item-right__box-text">
+                            Szacowana dostawa: 3-5 dni roboczych.</p>
+                    </div>
+                </div>
+                <div class="item-right__description">
+                    <div class="item-right__description-box">
+                        <div class="item-right__description-title">
+                            <h3 class="item-right__description-title-text">Opis</h3>
+                            <div class="item-right__description-title-icon"></div>
+                        </div>
+                        <div class="item-right__description-container">
+                            <p class="item-right__description-container--text">
+                                T-shirt bez nadruku damski idealnie sprawdzi się jako element zarówno casualowych, jak i
+                                sportowych stylizacji na co dzień.
+
+                                Posiada krój regular, który wygodnie dopasowuje się do sylwetki oraz standardową długość
+                                sięgającą do linii bioder. Splot single jersey z jednostronną gładką powierzchnią
+                                sprawia, że koszulka jest elastyczna i komfortowa w noszeniu.
+
+                                Koszulka bez nadruku damska dzięki gramaturze 160 gsm jest miękka, lekka i przewiewna.
+                                Doskonale nadaje się do noszenia zwłaszcza w okresie letnim bądź jako podkoszulek pod
+                                bluzę czy koszulę.
+
+                                Gładki T-shirt damski z krótkim rękawem jest wykonany w 98% z bawełny, dzięki czemu jest
+                                miękki, trwały i przyjemny w dotyku. Dzięki dodatkowi wiskozy (2%) materiał jest bardzo
+                                przyjemny w dotyku, a do tego lekki i zwiewny oraz dobrze układa się na sylwetce.
+
+                                Okrągły dekolt jest zakończony lekkim ribowaniem.
+
+                                Koszulka dla kobiet - CECHY:
+                                gramatura: 160 gsm
+
+                                zakres rozmiarów: XS-XXL
+
+                                krój: regular, który wygodnie dopasowuje się do sylwetki
+
+                                wykonana w 98% z bawełny, dzięki czemu jest miękka, trwała i przyjemna w dotyku
+
+                                dodatek wiskozy (2%) sprawia, że materiał jest bardzo przyjemny w dotyku, a do tego
+                                lekki i zwiewny, dzięki czemu dobrze układa się na sylwetce
+
+                                jednolita kolorystyka pasująca do wielu stylizacji
+
+                                miękka w dotyku dzianina single jersey o gładkiej powierzchni
+
+                                okrągły dekolt z lekkim ribowaniem
+
+                                INFORMACJE SZCZEGÓŁOWE O T-SHIRT REGULAR GŁADKI DAMSKI - SZARY
+                                Materiał główny: Bawełna 98%, Wiskoza 2%
+                                Symbol produktu: 4FRSS24TTSHF2049-27M
+                                Sezon: Wiosna-Lato 2024
+                                Linia: BASIC
+                                Dyscyplina: sportstyle
+                                Dekolt: okrągły
+                                Krój: regularny
+                                Długość: standardowa
+                                Kieszenie: bez kieszeni
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item-right__description-box">
+                        <div class="item-right__description-title">
+                            <h3 class="item-right__description-title-text">Jak pielęgnować</h3>
+                            <div class="item-right__description-title-icon"></div>
+                        </div>
+                        <div class="item-right__description-container">
+                            <p class="item-right__description-container--text">Poradnik dotyczący pielęgnacji
+                                Ty też możesz pomóc środowisku i sprawić, by moda stawała się bardziej zrównoważona.
+                                Przynieś niepotrzebne ubrania i tekstylia domowe do dowolnego sklepu H&M, a zostaną one
+                                przekazane do ponownego noszenia, ponownego użycia lub recyklingu.
+
+                                Przeczytaj o tym, jak sprawić, by Twoje ubrania wytrzymały dłużej
+                                Instrukcje prania i suszenia
+                                Prać z podobnymi kolorami
+                                Używać wyłącznie wybielacza bez chloru, w razie potrzeby
+                                Można prać chemicznie
+                                Rozwieś do wyschnięcia
+                                Prać w pralce w temperaturze 40°
+                                Prasować w wysokiej temperaturze
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="news news-itemGui">
+        <h2 class="news__title">Przeglądaj nowości</h2>
+        <div class="news-box">
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Żółta koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">199,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Biała koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">249,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Żółta koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">99,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Żółta koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">199,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Biała koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">249,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+            <div class="news-box__item">
+                <a class="news-item" href="#">
+                    <div class="news-item-img">
+                    </div>
+                    <div class="news-item__line"></div>
+                    <h3 class="news-item__title">Żółta koszulka</h3>
+                    <p class="news-item__text">Koszulki damskie</p>
+                    <p class="news-item__price">99,99 PLN</p>
+                    <div class="news-item__secoundLine"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="dist/js/secoundSlick.min.js"></script>
+    <script src="dist/js/item.min.js"></script>
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="footer-box">
+            <div class="footer-item">
+                <h2 class="footer-item__title">Zasady i warunki</h2>
+                <ul class="footer-item__list">
+                    <li class="footer-item__list-link"><a href="return-policy.html"
+                            class="footer-item__list-style">Polityka zwrotów i
+                            reklamacji</a>
+                    </li>
+                    <li class="footer-item__list-link"><a href="rules.html"
+                            class="footer-item__list-style">Regulamin</a>
+                    </li>
+                    <li class="footer-item__list-link"><a href="privacy policy.html"
+                            class="footer-item__list-style">Polityka
+                            prywatności</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-item__title">Informacje</h2>
+                <ul class="footer-item__list">
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">FAQ</a>
+                    </li>
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">O nas</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-item__title">Obserwuj nas</h2>
+                <ul class="footer-item__list">
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Facebook</a></li>
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Instagram</a>
+                    </li>
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Twitter</a></li>
+                    <li class="footer-item__list-link"><a href="#" class="footer-item__list-style">Tiktok</a></li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-item__title footer-item__btn--title">Napisz do nas</h2>
+                <a href="form.html" class="footer-item__btn">Otwórz formularz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+</html>

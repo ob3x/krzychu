@@ -16,6 +16,7 @@ const deleteItems = (e) => {
 	e.target.closest('.nav-heart__box').remove();
 };
 
+
 btnHeart.addEventListener('click', () => {
 	heartPopup.classList.toggle('active');
 });
