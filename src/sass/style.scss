@@ -217,16 +217,27 @@ body {
 			position: relative;
 			margin-left: 0.5em;
 			color: $black;
+			transition: color .3s;
 			z-index: 1;
 			&:hover {
 				color: $white;
 			}
 			&::after {
-				@include btnAnimation;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 0;
 				background-color: $black;
+				transition: height .3s;
+				z-index: -1;
+				content: '';
 			}
 			&:hover::after {
-				transform: translateY(0) scale(1);
+				height: 100%;
+			}
+			&:hover {
+				color: $white;
 			}
 		}
 	}
@@ -356,10 +367,6 @@ body {
 		}
 	}
 }
-
-// .heart-red {
-// 	background-image: url(../../src/img/src/heartActive.svg);
-// }
 
 .firstBaner {
 	position: relative;
@@ -1013,7 +1020,7 @@ body {
 				height: 3.5em;
 				border-radius: 50%;
 				&:hover {
-					border: 0.2em solid $grey;
+					border: 0.3em solid $grey;
 				}
 				&--red {
 					background-color: rgb(226, 16, 16);
@@ -1047,12 +1054,20 @@ body {
 				color: $white;
 				background-color: $black;
 				border: 0.2em solid $black;
+				transition: background-color 0.3s, color 0.3s;
 				&-icon {
 					background-image: url(../../src/img/src/basek-white.svg);
 					background-repeat: no-repeat;
 					width: 2em;
 					height: 2em;
 					margin-right: 1em;
+				}
+				&:hover {
+					background-color: $white;
+					color: $black;
+					.item-right__box--btn-icon {
+						background-image: url(../../src/img/src/basket.svg);
+					}
 				}
 			}
 			&-text {
@@ -1111,6 +1126,10 @@ body {
 		}
 	}
 }
+.color-active {
+	border: 0.3em solid $grey;
+}
+
 .overlay {
 	position: fixed;
 	top: 0;
@@ -1274,6 +1293,7 @@ body {
 	&__head {
 		background-color: $black;
 		color: $white;
+		height: 20%;
 		&-tr {
 			&--item {
 				margin: 1em;
@@ -1285,7 +1305,7 @@ body {
 }
 
 .container-active {
-	height: 100%;
+	max-height: 100%;
 }
 
 .footer {
@@ -1353,6 +1373,9 @@ body {
 }
 .active {
 	display: none;
+}
+.heart-red {
+	background-image: url(../../src/img/src/heartActive.svg);
 }
 
 @media (min-width: 576px) {
