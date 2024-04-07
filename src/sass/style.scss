@@ -1085,6 +1085,89 @@ body {
 		}
 	}
 }
+
+.login {
+	margin-top: 10em;
+	letter-spacing: 0.05em;
+	margin-bottom: 5em;
+	&__title {
+		padding: 1em;
+		font-size: 2rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	&-box {
+		display: flex;
+		justify-content: center;
+	}
+	&-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 3em;
+		width: 27%;
+	}
+	&__titles {
+		text-transform: uppercase;
+		font-size: 1.8rem;
+		text-align: center;
+		color: $grey;
+	}
+	&__line {
+		margin: 1.5em 0;
+		width: 100%;
+		height: 0.2em;
+		background-color: $black;
+	}
+	&__text {
+		font-size: 1.2rem;
+		color: $grey;
+		text-align: center;
+	}
+	&__btn {
+		margin-top: 3em;
+		padding: 1em;
+		width: 100%;
+		text-transform: uppercase;
+		background-color: $black;
+		color: $white;
+		border: 0.1em solid $black;
+		transition: background-color 0.3s, color 0.3s;
+		&:hover {
+			background-color: $white;
+			color: $black;
+		}
+	}
+	&-left {
+		&__input {
+			margin: 1em 0;
+			padding: 1em;
+			width: 100%;
+			border: 0.1em solid $black;
+			background-color: transparent;
+			&::placeholder {
+				letter-spacing: 0.05em;
+				font-size: 1.2rem;
+			}
+		}
+		&__text {
+			align-self: flex-end;
+			color: $light-grey;
+			font-size: 1.2rem;
+		}
+	}
+	&-right {
+		&__box {
+			margin-top: 1em;
+			&-text {
+				margin: 0.5em 0;
+				font-weight: bold;
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
 .color-active {
 	border: 0.3em solid $grey;
 }
