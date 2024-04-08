@@ -61,7 +61,7 @@ body {
 		text-transform: uppercase;
 		border: 0.1em solid $black;
 		background-color: $black;
-		transition: color .3s, background-color .3s;
+		transition: color 0.3s, background-color 0.3s;
 		&:hover {
 			background-color: $white;
 			color: $black;
@@ -1123,6 +1123,56 @@ body {
 	margin-top: 10em;
 	letter-spacing: 0.05em;
 	margin-bottom: 5em;
+	&-items {
+		margin-top: 1em;
+	}
+	&-checkbox {
+		display: flex;
+		align-items: center;
+		margin-top: 1em;
+		& input {
+			appearance: none;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			position: relative;
+			width: 1em;
+			height: 1em;
+			border: 0.1em solid $black;
+			padding: 0.6em;
+			margin-right: 0.6em;
+			&:checked::after {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				height: 80%;
+				content: '';
+				background-color: $black;
+			}
+		}
+		& p {
+			font-size: 1.2rem;
+		}
+		& a {
+			position: relative;
+			color: $black;
+			transition: color 0.3s;
+			&:hover {
+				color: $grey;
+			}
+		}
+	}
+	&-label {
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
+	&-error {
+		margin-top: 2em;
+		color: red;
+		font-size: 1.1rem;
+		font-weight: bold;
+	}
 	&__title {
 		padding: 1em;
 		font-size: 2rem;
@@ -1136,9 +1186,8 @@ body {
 	&-item {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		margin: 3em;
-		width: 27%;
+		margin: 4em;
+		width: 30%;
 	}
 	&__titles {
 		text-transform: uppercase;
@@ -1147,12 +1196,13 @@ body {
 		color: $grey;
 	}
 	&__line {
-		margin: 1.5em 0;
+		margin: 1.5em 0 2em;
 		width: 100%;
 		height: 0.2em;
 		background-color: $black;
 	}
 	&__text {
+		margin-bottom: 1em;
 		font-size: 1.2rem;
 		color: $grey;
 		text-align: center;
@@ -1173,7 +1223,7 @@ body {
 	}
 	&-left {
 		&__input {
-			margin: 1em 0;
+			margin: 0.5em 0;
 			padding: 1em;
 			width: 100%;
 			border: 0.1em solid $black;
@@ -1181,6 +1231,31 @@ body {
 			&::placeholder {
 				letter-spacing: 0.05em;
 				font-size: 1.2rem;
+			}
+			&-password {
+				position: relative;
+				&--eye {
+					position: absolute;
+					top: 50%;
+					right: 5%;
+					transform: translate(0, -50%);
+					background-image: url(../../src/img/src/eye.svg);
+					background-repeat: no-repeat;
+					width: 2em;
+					height: 2em;
+					cursor: pointer;
+					&::after {
+						position: absolute;
+						top: -5%;
+						left: 45%;
+						transform: translate(-50%, 0);
+						background-color: black;
+						height: 110%;
+						transform: rotate(135deg);
+						width: 0.2em;
+						content: '';
+					}
+				}
 			}
 		}
 		&__text {
@@ -1193,12 +1268,16 @@ body {
 		&__box {
 			margin-top: 1em;
 			&-text {
-				margin: 0.5em 0;
+				margin: 0.7em 0;
 				font-weight: bold;
 				font-size: 1.2rem;
 			}
 		}
 	}
+}
+
+.active-after::after {
+	display: none;
 }
 
 .color-active {

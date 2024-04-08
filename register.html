@@ -93,68 +93,27 @@
 </nav>
     <section class="login">
         <div class="wrapper">
-            <h1 class="login__title">Ravish.pl | Logowanie</h1>
+            <h1 class="login__title">Ravish.pl | Rejestracja</h1>
             <div class="login-box">
-                <div class="login-left login-item">
-                    <h2 class="login__titles">Zaloguj się</h2>
-                    <div class="login__line"></div>
-                    <p class="login__text">Zaloguj się używając swojego emailu i hasła.</p>
-                    <div class="login-items"><label class="login-label" for="">*Email</label><input type="email"
-                            class="login-left__input email" placeholder="mail@mail.com"></div>
-                    <div class="login-items"><label class="login-label" for="">*Hasło</label>
-                        <div class="login-left__input-password"><input type="password"
-                                class="login-left__input password" placeholder="Hasło">
-                            <div class="login-left__input-password--eye firstEye"></div>
-                        </div>
-                    </div>
-                    <a href="#" class="login-left__text">Zapomniałeś hasła?</a>
-                    <p class="login-error active loginError">Uzupełnij wszystkie pola!</p>
-                    <button class="login__btn loginBtn">Zaloguj się</button>
-                </div>
                 <div class="login-left login-item">
                     <h2 class="login__titles">Zarejestruj się</h2>
                     <div class="login__line"></div>
-                    <div class="login-names__title"><label class="login-label" for="">*Imię i Nazwisko</label><input
-                            type="text" class="login-item login-left__input name" placeholder="Adam Kowalski"></div>
-                    <div class="login-items"><label class="login-label" for="">*Email</label><input type="email"
-                            class="login-item login-left__input rightEmail" placeholder="email@mail.com"></div>
-                    <div class="login-items"><label class="login-label" for="">*Hasło</label>
-                        <div class="login-left__input-password"><input type="password"
-                                class="login-left__input rightPassword" placeholder="Hasło">
-                            <div class="login-left__input-password--eye secoundEye"></div>
-                        </div>
-                        <div class="login-items"><label class="login-label" for="">*Powtórz hasło</label>
-                            <div class="login-left__input-password"><input type="password"
-                                    class="login-left__input rightSecoundPassword" placeholder="Hasło">
-                                <div class="login-left__input-password--eye thirdEye"></div>
-                            </div>
-                        </div>
-                        <div class="login-items"><label class="login-label" for="">*Data urodzenia</label><input
-                                type="date" class="login-left__input rightDate"></div>
-                        <div class="login-items"><label class="login-label" for="">*Płeć</label><select name="gender"
-                                class="login-left__input rightGender"></div>
-                        <option value="1" class="login-select__item" selected disabled>Wybierz płeć</option>
+                    <div class="login-names">
+                        <input type="text" class="login-names__item " placeholder="*Imię">
+                        <input type="text" class="login-names__item " placeholder="*Nazwisko">
+                    </div>
+                    <input type="email" class="login-item login-left__input" placeholder="*Email">
+                    <input type="password" class="login-left__input" placeholder="*Hasło">
+                    <input type="date" class="login-left__input">
+                    <select name="gender" class="login-left__input">
+                        <option value="1" class="login-select__item">Twoja płeć</option>
                         <option value="2" class="login-select__item">Mężczyzna</option>
                         <option value="3" class="login-select__item">Kobieta</option>
                         <option value="4" class="login-select__item">Nie chce podawać</option>
-                        </select>
-                        <div class="login-checkbox">
-                            <input type="checkbox" class="checkbox">
-                            <p>Wyrażam zgodę na <a href="rules.html">Warunki korzystania</a> i <a
-                                    href="privacy policy.html">Politykę prywatności</a>, łącznie z
-                                <a href="return-policy.html">Polityką
-                                    zwrotów i reklamacji.</a>*
-                            </p>
-                        </div>
-                        <div class="login-checkbox">
-                            <input type="checkbox" class="checkbox">
-                            <p>Chcę otrzymywać Newsletter. <a href="privacy policy.html">Dowiedz się więcej.</a></p>
-                        </div>
-                        <p class="login-error active registerError">Uzupełnij wszystkie pola!</p>
-                        <button class="login__btn registerBtn">Zarejestuj się</button>
-                    </div>
+                    </select>
                 </div>
             </div>
+        </div>
     </section>
     <footer class="footer">
     <div class="wrapper">
@@ -201,7 +160,6 @@
     </div>
 </footer>
     <script src="dist/js/nav.min.js"></script>
-    <script src="dist/js/login.min.js"></script>
 </body>
 
 </html>
