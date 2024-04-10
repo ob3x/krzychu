@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+    <!-- @Include 'nav' -->
+    <!-- @include 'notification' -->
+
+    <section class="firstBaner shopsite-baner">
+        <div class="firstBaner-hero"></div>
+        <div class="firstBaner-box wrapper">
+            <h2 class="firstBaner-box__title">Tytul baneru 1</h2>
+            <p class="firstBaner-box__text">Opis baneru z tytulem baneru nr 1</p>
+        </div>
+    </section>
+    <section class="shopsite">
+        <h1 class="shopsite-title">Nowa kolekcja wiosna/lato 2024</h1>
+        <aside class="shopsite-left">
+            <h2 class="shopsite-left__title">Wybrane filtry:</h2>
+            <div class="shopsite-left__box">
+                <h3 class="shopsite-left__titles">Cena</h3>
+                <div class="shopsite__price">
+                    <div class="shopsite__price-slider">
+                        <div class="shopsite__price-slider--item"></div>
+                    </div>
+                    <div class="shopsite__price-range">
+                        <input type="range" class="shopsite__price-range--min" min="0" max="10000" value="2500">
+                        <input type="range" class="shopsite__price-range--max" min="0" max="10000" value="7500">
+                    </div>
+                    <div class="shopsite__price-row">
+                        <div class="shopsite__price-box">
+                            <span class="shopsite__price-box--title">Min</span>
+                            <input type="number" class="shopsite__price-box--item min-input" value="2500" step="100">
+                        </div>
+                        <div class="shopsite__price-box">
+                            <span class="shopsite__price-box--title">Max</span>
+                            <input type="number" class="shopsite__price-box--item max-input" value="7500" step="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="shopsite-left__box">
+                    <h3 class="shopsite-left__titles">Rozmiar</h3>
+                    <div class="shopsite__sizes">
+                        <button class="shopsite__sizes-item">S</button>
+                        <button class="shopsite__sizes-item">M</button>
+                        <button class="shopsite__sizes-item">L</button>
+                        <button class="shopsite__sizes-item">XL</button>
+                        <button class="shopsite__sizes-item">XXL</button>
+                    </div>
+                </div>
+                <div class="shopsite-left__box">
+                    <h3 class="shopsite-left__titles">Kolor</h3>
+                    <div class="shopsite-left__colors">
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--red"></div>
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--blue"></div>
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--purple"></div>
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--green"></div>
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--black"></div>
+                        <div class="shopsite-left__colors-item shopsite-left__colors-item--yellow"></div>
+                    </div>
+                </div>
+                <div class="shopsite-left__box">
+                    <h3 class="shopsite-left__titles">Materiał</h3>
+                </div>
+                <div class="shopsite-left__box">
+                    <h3 class="shopsite-left__titles">Wyprzedaż i oferty</h3>
+                </div>
+        </aside>
+        <div class="shopsite-right"></div>
+    </section>
+
+    <script src="dist/js/nav.min.js"></script>
+    <script src="dist/js/shopsite.min.js"></script>
+    <!-- @Include 'footer' -->
+</body>
+
+</html>

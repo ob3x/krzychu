@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravish.pl | Logowanie</title>
+    <title>Ravish.pl | Resetowanie hasła</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta name="robots" content="noindex" />
@@ -16,34 +16,28 @@
 </head>
 
 <body>
-    <!-- @Include 'nav' -->
+    <!-- @Include 'nav' --> 
     <!-- @include 'notification' -->
     <section class="login">
         <div class="wrapper">
-            <h1 class="login__title">Ravish.pl | Rejestracja</h1>
+            <h1 class="login__title">Ravish.pl | Resetowanie hasła</h1>
             <div class="login-box">
                 <div class="login-left login-item">
-                    <h2 class="login__titles">Zarejestruj się</h2>
+                    <h2 class="login__titles">Resetowanie hasła</h2>
                     <div class="login__line"></div>
-                    <div class="login-names">
-                        <input type="text" class="login-names__item " placeholder="*Imię">
-                        <input type="text" class="login-names__item " placeholder="*Nazwisko">
-                    </div>
-                    <input type="email" class="login-item login-left__input" placeholder="*Email">
-                    <input type="password" class="login-left__input" placeholder="*Hasło">
-                    <input type="date" class="login-left__input">
-                    <select name="gender" class="login-left__input">
-                        <option value="1" class="login-select__item">Twoja płeć</option>
-                        <option value="2" class="login-select__item">Mężczyzna</option>
-                        <option value="3" class="login-select__item">Kobieta</option>
-                        <option value="4" class="login-select__item">Nie chce podawać</option>
-                    </select>
+                    <p class="login__text">Proszę podać adres email użyty przy rejestracji konta.</p>
+                    <p class="login__text">Wyślemy na twoją skrzynkę pocztową email do zresetowania hasła.</p>
+                    <div class="login-items"><label class="login-label" for="">*Email</label><input type="email"
+                            class="login-left__input email" placeholder="mail@mail.com"></div>
+                    <p class="login-error active loginError">Uzupełnij wszystkie pola!</p>
+                    <button class="login__btn loginBtn">Wyślij link do resetowania hasła</button>
+                    <a href="login.html" class="login-cancel">Anuluj</a>
                 </div>
             </div>
-        </div>
     </section>
     <!-- @Include 'footer' -->
     <script src="dist/js/nav.min.js"></script>
+    <script src="dist/js/reset.min.js"></script>
 </body>
 
 </html>
