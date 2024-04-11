@@ -106,6 +106,7 @@ body {
 			margin: 1.2em;
 			height: 2.1em;
 			width: 2.5em;
+			cursor: pointer;
 			&-heart {
 				background-image: url(../../src/img/src/heart.svg);
 			}
@@ -1046,12 +1047,13 @@ body {
 	}
 	&-menu {
 		position: sticky;
-		top: 4.6em;
+		top: 4.5em;
 		padding: 1em;
 		font-size: 1.5rem;
 		text-transform: uppercase;
 		background-color: $white;
 		border-bottom: 0.1em solid $black;
+		z-index: 10;
 		&__list {
 			display: flex;
 			justify-content: left;
@@ -1282,6 +1284,7 @@ body {
 		color: $white;
 		border: 0.1em solid $black;
 		transition: background-color 0.3s, color 0.3s;
+		cursor: pointer;
 		&:hover {
 			background-color: $white;
 			color: $black;
